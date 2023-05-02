@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Red -->
+    <color name="red_400">#FFE74D59</color>
+    <color name="red_500">#FFDC172A</color>
+
+    <!-- Green -->
+
+    <!-- Turquoise -->
+
+    <!-- Blue -->
+
+    <!-- Royalblue -->
+    <color name="royalblue_300">#FF97a9ff</color>
+    <color name="royalblue_400">#FF748cff</color>
+    <color name="royalblue_600">#FF4556d7</color>
+    <color name="royalblue_700">#FF393db0</color>
+
+    <!-- Purple -->
+
+    <!-- White, Black, and Gray -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_130">#FFF2F2F2</color>
+    <color name="gray_200">#FFE6E6E6</color>
+    <color name="gray_600">#FF6d6d6d</color>
+    <color name="gray_860">#FF242424</color>
+    <color name="gray_900">#FF191919</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Logo Colors -->
+
+    <color name="primary_background">#FF1B1B1D</color>
+    <color name="primary_card_background">#FF242526</color>
+    <color name="primary_panel_background">#FF323234</color>
+    <color name="primary_panel_foreground">#FF4C4B4B</color>
+
+    <color name="theme_neutral_60">#FF656680</color>
+    <color name="theme_neutral_80">#FFC1C2D6</color>
+
+    <color name="theme_primary_50">#FF474872</color>
+    <color name="theme_primary_70">#FF9FA1F1</color>
+    <color name="theme_primary_80">#FFBEBFF5</color>
+
+</resources>

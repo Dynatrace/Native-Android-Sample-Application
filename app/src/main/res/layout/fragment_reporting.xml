@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReportingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_report_events"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_report_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_report_events"
+            android:layout_alignTop="@id/btn_tooltip_report_events"
+            android:text="@string/title_reporting_events"
+            style="@style/H2"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_report_events"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_report_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:text="@string/label_reporting_event"
+            style="@style/PrimaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_report_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_report_event"
+            android:text="@string/label_reporting_error"
+            style="@style/PrimaryButtonStyle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?appThemePanelCard">
+
+        <Button
+            android:id="@+id/btn_tooltip_report_values"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_report_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_report_values"
+            android:layout_alignTop="@id/btn_tooltip_report_values"
+            android:text="@string/title_reporting_values"
+            style="@style/H2"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_report_values"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_setup_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_report_string"
+            android:layout_margin="4dp"
+            android:padding="16dp"
+            android:textSize="12sp"
+            android:text="@string/label_reporting_properties"
+            style="@style/SecondaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_report_integer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:text="@string/label_reporting_integer"
+            style="@style/PrimaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_report_double"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_report_integer"
+            android:text="@string/label_reporting_double"
+            style="@style/PrimaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_report_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_report_double"
+            android:text="@string/label_reporting_string"
+            style="@style/PrimaryButtonStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

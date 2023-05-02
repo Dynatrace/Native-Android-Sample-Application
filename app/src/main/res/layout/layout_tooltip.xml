@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_tooltip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_title"
+        android:textColor="@color/gray_900"
+        style="@style/H2"/>
+
+    <TextView
+        android:id="@+id/textview_tooltip_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_tooltip_title"
+        android:text="@string/dialog_dismiss"
+        android:textSize="14dp"
+        android:textColor="@color/gray_900"
+        style="@style/Body"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_dismiss"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/textview_tooltip_message"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:text="@string/dialog_dismiss"/>-->
+
+</RelativeLayout>

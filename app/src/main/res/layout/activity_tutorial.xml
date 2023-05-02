@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?appThemeBackgroundColor"
+    tools:context=".TutorialActivity">
+
+    <TextView
+        android:id="@+id/textView_tutorial_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="8dp"
+        android:text="@string/title_tutorial"
+        style="@style/H1" />
+
+    <LinearLayout
+        android:id="@+id/layout_navigation_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView_tutorial_title">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="12dp"
+            android:text="@string/action_previous"
+            android:onClick="previousFragment"
+            style="@style/SecondaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="12dp"
+            android:text="@string/action_next"
+            android:onClick="nextFragment"
+            style="@style/SecondaryButtonStyle"/>
+
+    </LinearLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_navigation_panel">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            style="@style/PrimaryPanelStyle">
+
+            <FrameLayout
+                android:id="@+id/layout_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/menu_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/tutorial_navigation_menu"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

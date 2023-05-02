@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="appThemeBackgroundColor" format="reference"/>
+    <attr name="appThemeDividerColor" format="reference"/>
+
+    <attr name="appThemeDivider" format="reference"/>
+    <attr name="appThemePanel" format="reference"/>
+    <attr name="appThemePanelCard" format="reference"/>
+    <attr name="appThemeCard" format="reference"/>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:id="@+id/nav_group_application">
+
+        <item android:id="@+id/nav_home"
+            android:title="@string/title_home"/>
+
+    </group>
+    <group android:id="@+id/nav_group_instrumentation">
+
+        <item android:id="@+id/nav_data_privacy_settings"
+            android:title="@string/title_settings"/>
+
+        <item android:id="@+id/nav_user_actions"
+            android:title="@string/title_user_actions" />
+
+        <item android:id="@+id/nav_web_requests"
+            android:title="@string/title_web_requests" />
+
+        <item android:id="@+id/nav_crash_reporting"
+            android:title="@string/title_crash_reporting" />
+
+        <item android:id="@+id/nav_reporting"
+            android:title="@string/title_reporting" />
+
+        <item android:id="@+id/nav_advanced_topics"
+            android:title="@string/title_advanced_topics" />
+
+    </group>
+</menu>

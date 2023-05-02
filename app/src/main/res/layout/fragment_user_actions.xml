@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActionsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_useraction_instrumentation"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_useraction_instrumentation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_useraction_instrumentation"
+            android:layout_alignTop="@id/btn_tooltip_useraction_instrumentation"
+            android:text="@string/title_useraction_instrumentation"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_useraction_instrumentation"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_useraction_what"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:text="@string/label_useraction_what"
+            style="@style/PrimaryButtonStyle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_useraction_naming"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_useraction_naming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_useraction_naming"
+            android:layout_alignTop="@id/btn_tooltip_useraction_naming"
+            android:text="@string/title_useraction_naming"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_useraction_naming"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2">
+            <TableRow android:id="@+id/row1">
+
+                <Button
+                    android:id="@+id/btn_naming_content_description"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:contentDescription="@string/label_useraction_naming_content_description"
+                    android:text="@string/action_useraction_click"
+                    style="@style/PrimaryButtonStyle"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/message_useraction_naming_content_description"
+                    style="@style/Body"/>
+
+            </TableRow>
+            <TableRow android:id="@+id/row2">
+
+                <Button
+                    android:id="@+id/btn_naming_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/action_useraction_click"
+                    style="@style/PrimaryButtonStyle"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/message_useraction_naming_text"
+                    style="@style/Body"/>
+
+            </TableRow>
+            <TableRow android:id="@+id/row3">
+
+                <ImageButton
+                    android:id="@+id/btn_naming_class"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/mobile_action_white"
+                    style="@style/PrimaryButtonStyle"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/message_useraction_naming_class"
+                    style="@style/Body"/>
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_modify_action"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_modify_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_modify_action"
+            android:layout_alignTop="@id/btn_tooltip_modify_action"
+            android:text="@string/title_useraction_modify_actions"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_modify_action"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_modify_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider3"
+            android:text="@string/label_useraction_modify_action"
+            style="@style/PrimaryButtonStyle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_custom_action"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_custom_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_custom_action"
+            android:layout_alignTop="@id/btn_tooltip_custom_action"
+            android:text="@string/title_useraction_custom_actions"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_custom_action"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_custom_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider4"
+            android:text="@string/label_useraction_custom_action"
+            style="@style/PrimaryButtonStyle"/>
+
+        <Button
+            android:id="@+id/btn_custom_action_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_custom_action"
+            android:text="@string/label_useraction_custom_action_parent"
+            style="@style/PrimaryButtonStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

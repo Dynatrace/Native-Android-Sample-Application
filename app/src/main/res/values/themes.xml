@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Default" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/gray_200</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+
+        <!-- Action Bar Styles -->
+        <item name="actionBarStyle">@style/Widget.DefaultAppTheme.ActionBar</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.DefaultAppTheme.ActionBar</item>
+    </style>
+
+    <style name="Theme.Primary" parent="Theme.Default">
+
+        <!-- Theme Styles -->
+        <item name="buttonStyle">@style/PrimaryButtonStyle</item>
+        <item name="appThemeDivider">@style/PrimaryDivider</item>
+        <item name="appThemeCard">@style/PrimaryCardStyle</item>
+        <item name="appThemePanel">@style/PrimaryPanelStyle</item>
+        <item name="appThemePanelCard">@style/PrimaryPanelCardStyle</item>
+
+        <!-- Theme Colors -->
+        <item name="appThemeBackgroundColor">@color/primary_background</item>
+
+    </style>
+
+</resources>

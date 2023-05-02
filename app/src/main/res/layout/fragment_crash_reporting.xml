@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context=".CrashReportingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?appThemePanelCard">
+
+        <Button
+            android:id="@+id/btn_tooltip_crashreporting"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_crashreporting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_crashreporting"
+            android:layout_alignTop="@id/btn_tooltip_crashreporting"
+            android:text="@string/title_crashreporting"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_crashreporting"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_crash_application"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:text="@string/action_crashreporting_crash_app"
+            style="@style/CrashThemeButton"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?appThemePanelCard">
+
+        <Button
+            android:id="@+id/btn_tooltip_sessionreplay"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_sessionreplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_sessionreplay"
+            android:layout_alignTop="@id/btn_tooltip_sessionreplay"
+            android:text="@string/title_sessionreplay_masking"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_sessionreplay"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <LinearLayout
+            android:id="@+id/layout_switches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_safest"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:text="@string/label_sessionreplay_masking_safest"
+                android:checked="true"
+                style="@style/PrimarySwitch"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_safe"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:text="@string/label_sessionreplay_masking_safe"
+                style="@style/PrimarySwitch"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_custom"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:text="@string/label_sessionreplay_masking_custom"
+                style="@style/PrimarySwitch"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_session_replay_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/layout_switches"
+            android:layout_alignBottom="@id/layout_switches"
+            android:text="@string/message_crashreporting_sessionreplay_safest"
+            style="@style/Body" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ############################ -->
+    <!-- #####                  ##### -->
+    <!-- ###   ActionBar Styles   ### -->
+    <!-- #####                  ##### -->
+    <!-- ############################ -->
+
+        <style name="ThemeOverlay.DefaultAppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+            <item name="android:textColorPrimary">@color/white</item>
+        </style>
+
+        <style name="Widget.DefaultAppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+            <item name="background">@color/black</item>
+        </style>
+
+
+
+
+    <!-- ######################### -->
+    <!-- #####               ##### -->
+    <!-- ###   Button Styles   ### -->
+    <!-- #####               ##### -->
+    <!-- ######################### -->
+
+        <style name="DefaultButton" parent="Widget.AppCompat.Button">
+            <item name="android:gravity">center</item>
+            <item name="android:layout_margin">4dp</item>
+            <item name="android:padding">16dp</item>
+            <item name="android:inputType">textCapSentences</item>
+            <item name="android:maxLines">2</item>
+        </style>
+
+            <style name="PrimaryButtonStyle" parent="DefaultButton">
+                <item name="android:background">@drawable/button_primary</item>
+                <item name="android:textColor">@color/gray_130</item>
+                <item name="android:textSize">14sp</item>
+            </style>
+
+            <style name="SecondaryButtonStyle" parent="DefaultButton">
+                <item name="android:background">@drawable/button_secondary</item>
+                <item name="android:textColor">@color/theme_primary_70</item>
+                <item name="android:textSize">24sp</item>
+                <item name="android:padding">24dp</item>
+            </style>
+
+            <style name="CrashThemeButton" parent="DefaultButton">
+                <item name="android:background">@drawable/button_crash</item>
+                <item name="android:inputType">textMultiLine</item>
+                <item name="android:padding">24dp</item>
+                <item name="android:textSize">20sp</item>
+            </style>
+
+            <style name="PrimaryTooltip" parent="DefaultButton">
+                <item name="android:layout_width">40dp</item>
+                <item name="android:layout_height">40dp</item>
+                <item name="android:background">@drawable/button_tooltip</item>
+                <item name="android:textColor">@color/theme_primary_70</item>
+                <item name="android:gravity">center</item>
+                <item name="android:textSize">24sp</item>
+                <item name="android:padding">4dp</item>
+                <item name="android:text">@string/label_tooltip</item>
+            </style>
+
+        <style name="PrimarySwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+            <item name="android:padding">8dp</item>
+            <item name="android:textSize">14sp</item>
+            <item name="android:textColor">@color/gray_130</item>
+            <item name="android:layout_margin">4dp</item>
+            <item name="android:gravity">start</item>
+            <item name="thumbTint">@color/royalblue_600</item>
+            <item name="track">@drawable/switch_track_background</item>
+
+<!--            <item name="android:thumb">@drawable/switch_thumb_background</item>-->
+<!--            <item name="track">@drawable/switch_track_background</item>-->
+        </style>
+
+
+    <!-- ########################### -->
+    <!-- #####                 ##### -->
+    <!-- ###   TextView Styles   ### -->
+    <!-- #####                 ##### -->
+    <!-- ########################### -->
+
+        <style name="TextDefault">
+            <item name="fontFamily">@font/roboto_medium</item>
+            <item name="android:padding">4dp</item>
+        </style>
+
+            <style name="Body" parent="TextDefault">
+                <item name="android:textSize">14sp</item>
+            </style>
+
+            <style name="H1" parent="TextDefault">
+                <item name="android:textSize">28sp</item>
+                <item name="fontWeight">600</item>
+            </style>
+
+            <style name="H2" parent="TextDefault">
+                <item name="android:textSize">24sp</item>
+                <item name="fontWeight">600</item>
+                <item name="android:gravity">center_vertical</item>
+            </style>
+
+            <style name="H3" parent="TextDefault">
+                <item name="android:textSize">18sp</item>
+            </style>
+
+            <style name="Label" parent="TextDefault">
+                <item name="android:textSize">14sp</item>
+            </style>
+
+
+    <!-- ####################################### -->
+    <!-- #####                             ##### -->
+    <!-- ###   Primary Theme Custom Styles   ### -->
+    <!-- #####                             ##### -->
+    <!-- ####################################### -->
+
+        <!--    Divider Style    -->
+        <style name="PrimaryDivider">
+            <item name="android:layout_height">1dp</item>
+            <item name="android:layout_marginTop">2dp</item>
+            <item name="android:layout_marginBottom">8dp</item>
+            <item name="android:background">@color/gray_860</item>
+        </style>
+
+        <!--    Panel    -->
+        <style name="PrimaryPanelStyle">
+            <item name="android:background">@drawable/primary_panel</item>
+            <item name="android:padding">8dp</item>
+        </style>
+
+        <style name="PrimaryPanelCardStyle">
+            <item name="android:background">@drawable/primary_panel_card</item>
+            <item name="android:padding">16dp</item>
+            <item name="android:layout_marginBottom">16dp</item>
+        </style>
+
+        <!--    Card    -->
+        <style name="PrimaryCardStyle">
+            <item name="android:background">@drawable/primary_card</item>
+            <item name="android:textColor">@color/theme_primary_80</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center_horizontal</item>
+        </style>
+
+</resources>

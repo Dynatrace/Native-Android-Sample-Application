@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">Dynatrace Android Instrumentation Tutorial</string>
+
+    <string name="action_next">Next</string>
+    <string name="action_previous">Prev</string>
+    <string name="action_begin_tutorial">Begin Tutorial</string>
+    <string name="action_useraction_click">Click me!</string>
+    <string name="action_webrequest_standalone">Delay: 6000 ms (6.0s) - #web-request-monitoring</string>
+    <string name="action_webrequest_linked_1">Delay: 0 ms - #configure-web-request-monitoring</string>
+    <string name="action_webrequest_linked_2">Delay: 900 ms - #disable-web-request-monitoring</string>
+    <string name="action_webrequest_linked_3">Delay: 4000 ms - #web-request-monitoring-sensors</string>
+    <string name="action_crashreporting_crash_app">Crash Application\n(Divide by Zero)</string>
+
+    <string name="dialog_dismiss">Dismiss</string>
+    <string name="dialog_title">Additional Info.</string>
+    <string name="dialog_dataprivacy_data_collection_levels">When UserOptIn is set to TRUE, the DataCollectionLevel is set to OFF until it is changed with the API, meaning no data will be collected until the user chooses to Opt-in to data collection.\n\nUse the toggles below to change the DataCollectionLevel (changing this setting creates a new session for the new value)</string>
+    <string name="dialog_dataprivacy_user_tagging">If UserOptIn is set to FALSE or DataCollectionLevel is set to User-Behavior, then the session can be tagged with a string value to identify the user</string>
+    <string name="dialog_useractions_automatic_instrumentation">The Dynatrace Android Gradle Plugin instruments the application at build time and configures the OneAgent to start automatically when the application starts up (unless autoStart is disabled).\n\nThe plugin instruments several click-listener sensors for user actions so that when users click on buttons which use those listeners, a user action will automatically be created.</string>
+    <string name="dialog_useractions_action_naming">User Action names are based on the attributes present on the widget and if none can be found, the class name is used for the action name. \n\nThe OneAgent evaluates the attributes in the following order\n\n1. contentDescription attribute\n2. text attribute\n3. Class name</string>
+    <string name="dialog_useractions_modify_actions">By calling Dynatrace.modifyUserAction() when a button is clicked, the SDK can be used to modify the action and perform actions on it such as renaming and reporting values\n\nThe sooner that Dynatrace.modifyUserAction() is called relative to the click, the more likely it is that the action is open when the method is called</string>
+    <string name="dialog_useractions_manual_instrumentation">Custom actions are a great way to supplement the automatic instrumentation of the plugin\n\nIf the plugin cannot not being used, then standalone manual instrumentation is required and all actions must created manually</string>
+    <string name="dialog_webrequests_URL">Each button on this page uses the base URL below to construct a URL and make a request to a different endpoint on that documentation page</string>
+    <string name="dialog_webrequests_standalone_requests">Monitored web requests that are sent at a time when there is no open user action detected will show up as a standalone request.\n\nThe 6-second delay is used here because the maximum timeout that can be configured for a user action to stay open is 5 seconds, so this ensures that the request will happen after the user action is closed</string>
+    <string name="dialog_webrequests_linked_requests">If a web request is sent while a user action is open, then the request should get linked to the action and show up in the waterfall analysis.\n\nIf web requests are consistently not showing up in the waterfall analysis, then it could be that there is too long of a delay between when the button is clicked and when the request is sent.\n\nThis can be improved by increasing or changing the timeout for user actions\n\n(build.gradle - userActions.timeout 1000)</string>
+    <string name="dialog_webrequests_manual_instrumentation">Web requests can be manually monitored and tagged for correlation, however, Web requests should never be instrumented for BOTH automatic and manual instrumentation.\n\nPlease ensure that the steps provided in the README have been completed to exclude the manual web request class from automatic instrumentation</string>
+    <string name="dialog_crashreporting">Dynatrace automatically captures any unhandled exceptions that crash the application and report the occurrence to Dynatrace for analysis.\n\nIf Session Replay is enabled, then the crash will also be recorded and sent with the crash report data.\n\nThe button below attempts to divide by zero and causes the app to crash and restart to the MainActivity</string>
+    <string name="dialog_sessionreplay_masking">When Session Replay is enabled and the app crashes, the agent will record the crash and send it back to Dynatrace.\n\nUse the toggles below to control the level of masking for the recording that is sent</string>
+    <string name="dialog_reporting_events">Use the SDK to report events and errors.\n\nEvents are a represented with a single String and show up in the waterfall analysis for the action they were reported to, whereas reported errors contain the exception that was thrown during the user action.\n\nThe SDK can be used to report events and errors to custom actions that are manually created, or it can be used to modify automatic actions and report to those actions</string>
+    <string name="dialog_reporting_values">Use the SDK to capture key-value pairs and report them to Dynatrace in the same manner that events and errors are reported.\n\nThe thing that makes reported values special is that they can also be used to set up User Action and User Session Properties to enhance the RUM data in the UI</string>
+    <string name="dialog_advanced">The Mobile Agent sends data back to the beacon forwarder for the tenant or cluster and if there are any proxies that require authorization, then the SDK can be used to set additional headers on those beacon requests to include or allow for authorization information to be properly sent with the requests</string>
+
+    <string name="label_tooltip">\?</string>
+    <string name="label_activity_main">MainActivity</string>
+    <string name="label_activity_tutorial">TutorialActivity</string>
+    <string name="label_open">Open</string>
+    <string name="label_close">Close</string>
+    <string name="label_advanced">Advanced Topics</string>
+    <string name="label_advanced_topics_custom_headers_enable">Set custom headers on beacon requests</string>
+    <string name="label_advanced_topics_custom_headers_disable">Clear custom headers from beacons</string>
+    <string name="label_dataprivacy_dcl_off">Off</string>
+    <string name="label_dataprivacy_dcl_performance">Performance</string>
+    <string name="label_dataprivacy_dcl_userbheavior">User-Behavior</string>
+    <string name="label_dataprivacy_tag_session">Tag Current Session with string "Tutorial User Tag"</string>
+    <string name="label_reporting">Reporting with SDK</string>
+    <string name="label_reporting_event">Report a single event to a user action</string>
+    <string name="label_reporting_error">Report an error - MalformedURLException</string>
+    <string name="label_reporting_properties">Setup a User Session or Action property</string>
+    <string name="label_reporting_integer">reportValue(\"tutorial integer\", 2)</string>
+    <string name="label_reporting_double">reportValue(\"tutorial double\", 8.259)</string>
+    <string name="label_reporting_string">reportValue(\"tutorial string\", \"Example String value\")</string>
+    <string name="label_crashreporting_overview">Crash Reporting &amp; Session Replay</string>
+    <string name="label_sessionreplay_masking_safest">Safest (Default)</string>
+    <string name="label_sessionreplay_masking_safe">Safe</string>
+    <string name="label_sessionreplay_masking_custom">Custom</string>
+    <string name="label_useraction_monitoring">User Action Monitoring</string>
+    <string name="label_useraction_what">What gets Instrumented</string>
+    <string name="label_useraction_when">When does Instrumentation occur?</string>
+    <string name="label_useraction_naming_content_description">Text present in \'contentDescription\' field</string>
+    <string name="label_useraction_modify_action">Modify and Rename an action with the SDK</string>
+    <string name="label_useraction_custom_action">Create a single custom user action</string>
+    <string name="label_useraction_custom_action_parent">Create a custom parent action with multiple children actions</string>
+    <string name="label_webrequest_monitoring">Web Request Monitoring</string>
+    <string name="label_webrequest_manually_tagged">Manually Tag and Monitor a web request</string>
+
+    <string name="message_dataprivacy_off">Only a single anonymous event is sent to count the user and no further data will be sent\n\nActions &amp; Events: NO\nSDK Reported Values: NO\nUserTags: NO</string>
+    <string name="message_dataprivacy_performance">Performance metrics and timings will be captured for the session, but no data that can be used to identify the user will be captured\n\nActions &amp; Events: YES\nSDK Reported Values: NO\nUserTags: NO</string>
+    <string name="message_dataprivacy_userbheavior">Track users accross multiple sessions and capture user-specific data such as user-tags and reported values\n\nActions &amp; Events: YES\nSDK Reported Values: YES\nUserTags: YES</string>
+    <string name="message_crashreporting_sessionreplay_safest">All of the editable text fields, images, web views, and switches are masked</string>
+    <string name="message_crashreporting_sessionreplay_safe">All of the editable text fields are masked</string>
+    <string name="message_crashreporting_sessionreplay_custom">By default, Custom applies the same level of masking as Safest but can be changed with API methods to decide exactly which components should be masked</string>
+    <string name="message_useraction_naming_class">Class name gets used since text &amp; content description are missing</string>
+    <string name="message_useraction_naming_content_description">Content Description Attribute gets used for the action name</string>
+    <string name="message_useraction_naming_text">Text Attribute (displayed text) gets used since content description is missing</string>
+    <string name="message_useraction_instrumentation">The following listeners are instrumented by the plugin for user action creation
+        \n\nAndroid\n\t.view.View$OnClickListener
+        \n\t.widget.AdapterView$OnItemClickListener
+        \n\t.widget.AdapterView$OnItemSelectedListener
+        \n\t.app.Activity.onOptionsItemSelected
+        \n\t.view.MenuItem$OnMenuItemClickListener
+
+        \n\nAndroidX
+        \n\t.viewpager.widget.ViewPager$OnPageChangeListener
+        \n\t.swiperefreshlayout.widget.SwipeRefreshLayout$OnRefreshListener
+
+        \n\nAndroid Support
+        \n\t.support.v4.view.ViewPager$OnPageChangeListener
+        \n\t.support.v4.widget.SwipeRefreshLayout$OnRefreshListener
+    </string>
+    <string name="message_useraction_naming_1">Check the layout file to see which attributes are present for each button\n\n/res/layout/fragment_user_actions.xml\nid=btn_naming_content_description\n
+        \ncontentDescription=\"Text present in \'contentDescription\' field\"
+        \ntext=\"Click me!\"</string>
+    <string name="message_useraction_naming_2">Check the layout file to see which attributes are present for each button\n\n/res/layout/fragment_user_actions.xml\nid=btn_naming_text\n
+        \ntext=\"Click me!\"</string>
+    <string name="message_useraction_naming_3">Check the layout file to see which attributes are present for each button\n\n/res/layout/fragment_user_actions.xml\nid=btn_naming_class</string>
+    <string name="message_useraction_modify">Normally this button would create a user action with the name \"Click on Modify and Rename an action with the SDK\"\n\n    \n\nThis specific example renames the action to \"Dynatrace.modifyUserAction()\"</string>
+    <string name="message_useraction_custom_action">2 Steps are required to successfully create a custom action\n\n1. Create the action and provide a name\n\t\tDTXAction customAction = \\\n\t\tDynatrace.enterAction(\"Custom Action Name\")\n\n2. Close the action\n\t\tcustomAction.leaveAction()</string>
+    <string name="message_useraction_custom_action_parent">Custom actions require a string parameter for the name, but there is also a second optional parameter which accepts a DTXAction variable to use as the parent action so that the newly created action will show up as a child in the waterfall analysis instead of as its own single action\n\nDynatrace.enterAction(\"ChildAction\", parentAction)</string>
+    <string name="message_webrequest_manually_tagged">Check out the ManualWebRequest class to see how the request is being manually timed and tagged for correlation</string>
+    <string name="message_reporting_properties">Navigate to the Mobile Application overview in the Dynatrace UI. Open up the settings and select the \"Session and user action properties\" section from the left-hand side\n\n\tClick \"Add Property\" and ensure that the \"Expression type\" is \"SDK reported value\", and that \"Name\" is set to the key used for reporting the value and ensure that the \"Data type\" matches the value being reported\n\nExample:\n\taction.reportValue(\"tutorial integer\", 2);\n\t\tName=tutorial integer\n\t\tData type=Long\n\nNOTE:\n\tWhile Reported Values will show up almost instantly in the waterfall analysis, user action and user session properties can only be used to search and filter RUM data for sessions that have already ended</string>
+
+    <string name="title_dynatrace_instrumentation_tutorial">Dynatrace Android Instrumentation Tutorial</string>
+    <string name="title_tutorial">Instrumentation Tutorial</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Data-Privacy Settings</string>
+    <string name="title_user_actions">User Actions</string>
+    <string name="title_web_requests">Web Requests</string>
+    <string name="title_crash_reporting">Crash Reporting</string>
+    <string name="title_reporting">Reporting with SDK</string>
+    <string name="title_advanced_topics">Advanced Topics</string>
+    <string name="title_advanced_topics_custom_beacon_headers">Custom HTTP Headers</string>
+    <string name="title_dataprivacy_data_collection_level">DataCollectionLevel</string>
+    <string name="title_dataprivacy_user_tagging">User Tagging</string>
+    <string name="title_crashreporting">Report Crashes</string>
+    <string name="title_sessionreplay_masking">Masking for Session Replay</string>
+    <string name="title_reporting_events">Report Events &amp; Errors</string>
+    <string name="title_reporting_values">Report Values</string>
+    <string name="title_useraction_instrumentation">Automatic Instrumentation</string>
+    <string name="title_useraction_naming">Action Naming</string>
+    <string name="title_useraction_modify_actions">Modify User Actions</string>
+    <string name="title_useraction_custom_actions">Manual Instrumentation - Custom Actions</string>
+    <string name="title_webrequest_manually_tag_request">Manual Instrumentation - Manually Tag Requests</string>
+    <string name="title_webrequest_standalone">Standalone Requests</string>
+    <string name="title_webrequest_linked">Linked Requests</string>
+
+    <string name="toast_webrequest_0">Request sent immediately to URL - </string>
+    <string name="toast_webrequest_900">Request sent after 0.9 seconds to URL - </string>
+    <string name="toast_webrequest_4000">Request sent after 4.0 seconds to URL - </string>
+    <string name="toast_webrequest_6000">Request sent after 6.0 seconds to URL - </string>
+
+    <string name="url_label">Base URL for requests</string>
+    <string name="url_dynatrace_documentation_android_shortlink">https://www.dynatrace.com/support/help/shortlink/dynatrace-android-gradle-plugin-monitoring</string>
+
+</resources>

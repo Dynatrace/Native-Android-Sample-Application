@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WebRequestsFragment">
+
+    <Button
+        android:id="@+id/btn_tooltip_request_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:text="@string/url_label"
+        style="@style/SecondaryButtonStyle" />
+
+    <TextView
+        android:id="@+id/txt_label_base_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/url_dynatrace_documentation_android_shortlink"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        style="@style/Body"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_marginVertical="4dp"
+        style="?appThemeDivider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_standalone_webrequest"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_standalone_webrequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_standalone_webrequest"
+            android:layout_alignTop="@id/btn_tooltip_standalone_webrequest"
+            android:text="@string/title_webrequest_standalone"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_standalone_webrequest"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_standalone_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:text="@string/action_webrequest_standalone"
+            style="@style/PrimaryButtonStyle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_linked_webrequests"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_linked_webrequests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_linked_webrequests"
+            android:layout_alignTop="@id/btn_tooltip_linked_webrequests"
+            android:text="@string/title_webrequest_linked"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_linked_webrequests"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_linked_request_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:text="@string/action_webrequest_linked_1"
+            style="@style/PrimaryButtonStyle"/>
+        <Button
+            android:id="@+id/btn_linked_request_900"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_linked_request_0"
+            android:text="@string/action_webrequest_linked_2"
+            style="@style/PrimaryButtonStyle"/>
+        <Button
+            android:id="@+id/btn_linked_request_4000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_linked_request_900"
+            android:text="@string/action_webrequest_linked_3"
+            style="@style/PrimaryButtonStyle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryPanelCardStyle">
+
+        <Button
+            android:id="@+id/btn_tooltip_manually_tag_requests"
+            android:layout_alignParentTop="true"
+            android:text="@string/label_tooltip"
+            style="@style/PrimaryTooltip" />
+        <TextView
+            android:id="@+id/text_manually_tag_requests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_tooltip_manually_tag_requests"
+            android:layout_alignTop="@id/btn_tooltip_manually_tag_requests"
+            android:text="@string/title_webrequest_manually_tag_request"
+            style="@style/H2"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/text_manually_tag_requests"
+            android:layout_marginVertical="4dp"
+            style="?appThemeDivider" />
+
+        <Button
+            android:id="@+id/btn_manually_tagged_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider3"
+            android:text="@string/label_webrequest_manually_tagged"
+            style="@style/PrimaryButtonStyle"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_manually_tag_linked"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/btn_manually_tag_standalone"-->
+<!--            android:text="@string/label_webrequest_custom_linked"-->
+<!--            style="@style/PrimaryButtonStyle"/>-->
+
+    </RelativeLayout>
+</LinearLayout>
