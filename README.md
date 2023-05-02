@@ -100,5 +100,6 @@ Initial Setup
    - Toggle the switch that's labeled **User-Behavior** to enable sending of data
    
 ![Dynatrace Android Tutorial Data Privacy Fragment (TutorialActivity)](doc/images/android_tutorial_data_privacy.png | height=400)
+<img src="doc/images/android_tutorial_data_privacy.png" height="400">
 
 ___
