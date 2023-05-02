@@ -66,7 +66,7 @@ Pre-requisites
   - **Dynatrace Tenant with a Mobile Application created in the UI**
     - Session Replay must be enabled: (Dynatrace UI Mobile App Settings) General > Enablement and cost control
 
-![Dynatrace Mobile Application Settings](doc/images/dynatrace_ui_mobile_settings.png | height=400)
+<img src="doc/images/dynatrace_ui_mobile_settings.png" height="400">
 
 ___
 
@@ -76,30 +76,29 @@ Initial Setup
 1. **Download & Open with Android Studio, and set project view to 'Android'**
    -  [Github documentation for getting a Git Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 
-![Android Studio Project Explorer Dropdown](doc/images/android_tutorial_project_tree.png | height=100)
+<img src="doc/images/android_tutorial_project_tree.png" height="100">
 
 2. **Open the Project [build.gradle](./build.gradle) file and follow the steps 1-3 from the Instrumentation Wizard (Mobile App in Dynatrace > ... > Settings > Instrumentation Wizard)**
    - NOTE: SKIP STEP 4! The code snippet required to enable data collection when UserOptIn is enabled has already been implemented in the class **DataPrivacySettingsFragment.java**
 
-![Top-level Build.gradle file](doc/images/android_tutorial_project_gradle.png | height=400)
-![Dynatrace Instrumentation Wizard](doc/images/dynatrace_ui_mobile_instrumentation_wizard.png | height=400)
+<img src="doc/images/android_tutorial_project_gradle.png" height="400">
+<img src="doc/images/dynatrace_ui_mobile_instrumentation_wizard.png" height="400">
 
 3. Add the line `exclude.classes "com.dynatrace.sample.android.app.ManualWebRequest"` to the sampleConfig section of the Agent configuration that was added in the last step
    - Manually instrumenting web requests that are automatically instrumented is not supported, and automatic instrumentation of web requests is enabled by default, so in order to provide an example for manually instrumenting web requests, a separate class was created that needs to be excluded from automatic instrumentation
 
-![Android Studio Exclude class from Instrumentation](doc/images/android_tutorial_exclude.png | height=300)
+<img src="doc/images/android_tutorial_exclude.png" height="300">
 
 4. **Build and Run the app**
    - File > Sync Project with Gradle Files (Wait for this to complete)
    - Run > Run 'app'
 
-![Dynatrace Android Tutorial Application Main Screen (MainActivity)](doc/images/android_tutorial_main_screen.png | height=400)
+<img src="doc/images/android_tutorial_main_screen.png" height="400">
 
 5. **Enable sending of Data for the agent since UserOptIn is enabled**   
    - Click on **Begin Tutorial** or open the navigation with the hamburger menu in the top-left corner of the app and press **Data-Privacy Settings**
    - Toggle the switch that's labeled **User-Behavior** to enable sending of data
    
-![Dynatrace Android Tutorial Data Privacy Fragment (TutorialActivity)](doc/images/android_tutorial_data_privacy.png | height=400)
 <img src="doc/images/android_tutorial_data_privacy.png" height="400">
 
 ___
