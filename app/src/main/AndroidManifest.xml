@@ -26,8 +26,6 @@
             android:name=".TutorialActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.app.lib_name" />
         </activity>
 
     </application>
