@@ -1,45 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    android:id="@+id/drawer_layout"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="?appThemeBackgroundColor">
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:padding="32dp"
-            android:text="@string/title_dynatrace_instrumentation_tutorial"
-            android:gravity="center"
-            android:background="@drawable/primary_panel"
-            style="@style/H1"/>
-
-        <Button
-            android:id="@+id/btn_start_tutorial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:layout_centerInParent="true"
-            android:text="@string/action_begin_tutorial"
-            android:onClick="onStartTutorial"
-            style="@style/SecondaryButtonStyle"/>
-
-    </RelativeLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/menu_navigation"
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/tutorial_navigation_menu"/>
+        android:background="?appThemeBackgroundColor"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_start_tutorial"
+                style="@style/SecondaryButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="32dp"
+                android:onClick="onStartTutorial"
+                android:text="@string/action_begin_tutorial" />
+
+            <TextView
+                style="@style/H1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/primary_panel"
+                android:gravity="center"
+                android:padding="32dp"
+                android:text="@string/title_dynatrace_instrumentation_tutorial" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/menu_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/tutorial_navigation_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarStyle"
+            tools:title="MainActivity" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

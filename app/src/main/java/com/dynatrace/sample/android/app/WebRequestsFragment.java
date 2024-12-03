@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import okhttp3.OkHttpClient;
@@ -33,6 +36,13 @@ public class WebRequestsFragment extends Fragment {
         configureLinkedRequestsCard();
         configureManualInstrumentationCard();
         configureTooltips();
+
+        ViewCompat.setOnApplyWindowInsetsListener(fragmentView, (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            // allow for bottom navigation, so we don't draw content behind it
+            v.setPadding(0, 0, 0, systemBars.bottom);
+            return insets;
+        });
 
         return fragmentView;
     }

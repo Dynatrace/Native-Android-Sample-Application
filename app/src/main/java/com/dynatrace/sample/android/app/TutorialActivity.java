@@ -9,7 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -34,11 +37,19 @@ public class TutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial);
 
         // Controller that handles the toggle state of the navigation menu
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         this.navigationController = new NavigationMenuController(this, getApplicationContext(),
-                findViewById(R.id.drawer_layout), findViewById(R.id.menu_navigation));
+                drawer, findViewById(R.id.menu_navigation));
 
+        Toolbar toolbar = findViewById(R.id.actionbar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("TutorialActivity");
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, 0, 0);
+        drawer.addDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(true);
+        toggle.syncState();
+        toggle.getDrawerArrowDrawable().setColor(getColor(R.color.white));
 
         // Check if the bundle exists and set the fragment
         activeFragmentNumber = getIntent().getIntExtra(INITIAL_FRAGMENT, 1);
