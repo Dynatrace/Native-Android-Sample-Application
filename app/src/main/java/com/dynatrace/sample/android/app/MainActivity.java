@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,10 +20,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Controller that handles the toggle state of the navigation menu
-        this.navigationController = new NavigationMenuController(MainActivity.this, getApplicationContext(), findViewById(R.id.drawer_layout), findViewById(R.id.menu_navigation));
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        this.navigationController = new NavigationMenuController(MainActivity.this, getApplicationContext(),
+                drawer, findViewById(R.id.menu_navigation));
 
+        Toolbar toolbar = findViewById(R.id.actionbar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("MainActivity");
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, 0, 0);
+        drawer.addDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(true);
+        toggle.syncState();
+        toggle.getDrawerArrowDrawable().setColor(getColor(R.color.white));
     }
 
     @Override

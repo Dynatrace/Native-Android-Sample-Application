@@ -41,20 +41,20 @@
             android:layoutDirection="rtl"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/switch_off"
                 android:layout_height="50dp"
                 android:layout_width="match_parent"
                 android:text="@string/label_dataprivacy_dcl_off"
                 android:checked="true"
                 style="@style/PrimarySwitch" />
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/switch_performance"
                 android:layout_height="50dp"
                 android:layout_width="match_parent"
                 android:text="@string/label_dataprivacy_dcl_performance"
                 style="@style/PrimarySwitch"/>
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/switch_user_behavior"
                 android:layout_height="50dp"
                 android:layout_width="match_parent"
